@@ -2,10 +2,13 @@
 This program simulates scheduling in order to see how the time required depends on the scheduling algorithm and the request patterns.
 
 ## Scheduling Algorithms
-* First Come First Serve
-* Round Robin with quantum = 2
-* Uniprogrammed (just one process active). When it is blocked, the system waits.
-* Shortest Job First (This is not preemptive, but is not run to completion, i.e. switch on I/O bursts).
+* First come first serve (FCFS)- the simplest scheduling policy, and in some sense, the fairest since it is first come first served. However, in some sense, this is not fair as well. For example a 1 hour job submitted one second before a 3 second job. This algorithm is an efficient usage of the cpu in the sense that the scheduler is very fast. FCFS does not favor interactive jobs.
+
+* Round Robin (RR) with quantum 2 - When a process is put into the running state, a timer is set to q milliseconds. If the timer goes off and the process is still running, the OS preempts the process.
+
+* Uniprogrammed - One active process. When it is blocked, the system waits.
+
+* Shortest job first (SJF) - sort jobs by execution time needed and run the shortest first. The advantage of shortest job first is the reduced average waiting time. The difficult of this algorithm is predicting the future (knowing in advance the time required for the job or the job's next-CPU burst).
 
 ## Breaking Ties
 Many jobs can have the same ‘‘priority’’. For example in RR jobs can become ready at the same cycle, and an order must be decided to insert them onto the FIFO ready queue. Ties are broken by favoring the process with earliest arrival time A. If the arrival times are the same for two processes with the same priority, the process that is listed earliest in the input is favored.
