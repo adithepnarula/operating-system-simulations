@@ -14,19 +14,28 @@ Deadlock cannot occur for banker’s algorithm, but can for the optimistic resou
 
 2. To compile my program issue type the following command in terminal:
 ````
->> gcc -Wall -g -o program main_final.c fifo_final.c banker_final.c
+gcc -Wall -g -o program main_final.c fifo_final.c banker_final.c
 ````
 
 3. To run my program type the following command in terminal:
+For PC
 ```
-	(for pc) >> program.exe input11.txt
-	(for unix) >> ./program input11.txt
+program.exe input11.txt
+```
+For UNIX
+```
+ ./program input11.txt
 ```
 
 4. My program accepts a verbose flag. To run in verbose mode:
+
+For PC
 ```
-	(for pc) >> program.exe input11.txt --verbose
-	(for unix) >> ./program input11.txt --verbose
+program.exe input11.txt --verbose
+```
+For UNIX
+```
+./program input11.txt --verbose
 ```
 
 5. Some limitations:
